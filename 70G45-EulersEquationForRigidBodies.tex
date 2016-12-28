@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulersEquationForRigidBodies}
+\pmcreated{2013-03-22 17:10:36}
+\pmmodified{2013-03-22 17:10:36}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Euler's equation for rigid bodies}
+\pmrecord{8}{39490}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{70G45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+Let $1$ be an inertial frame body (a rigid body) and $2$ a rigid body in motion respect to an observer located at $1$. Let $Q$ be an arbitrary point (fixed or in motion) and $C$ the center of mass of $2$. Then,
+\begin{align}
+\mathbf{M}_Q=\boldsymbol{\mathbb{I}}^Q\boldsymbol{\alpha}_{21}+
+\boldsymbol{\omega}_{21}\times(\boldsymbol{\mathbb{I}}^Q\boldsymbol{\omega}_{21})+
+m\mathbf{\overline{QC}}\times \mathbf{a}^{Q2}_1,
+\end{align}
+where $m$ is the mass of the rigid body, $\mathbf{\overline{QC}}$ the position vector of $C$ respect to $Q$, $\mathbf{M}_Q$ is the moment of forces system respect to $Q$, $\boldsymbol{\mathbb{I}}^Q$ the tensor of inertia respect to orthogonal axes embedded in $2$ and origin at $Q2$ {\footnote{That is possible because the kinematical concept of frame extension.}}, and $\mathbf{a}^{Q2}_1$, $\boldsymbol{\omega}_{21}$, $\boldsymbol{\alpha}_{21}$, are the acceleration of $Q2$, the angular velocity and acceleration vectors respectively, all of them measured by an observer located at $1$. \\
+This equation was got by Euler by using a  fixed system of principal axes with origin at $C2$. In that case we have $Q=C$, and therefore
+\begin{align}
+\mathbf{M}_C=\boldsymbol{\mathbb{I}}^C\boldsymbol{\alpha}_{21}+ \boldsymbol{\omega}_{21}\times(\boldsymbol{\mathbb{I}}^C\boldsymbol{\omega}_{21}).
+\end{align}
+Euler used three independent scalar equations to represent (2). It is well known that the number of degrees of freedom associate to a rigid body in free motion in $\mathbb{R}^3$ are six, just equal the number of independent scalar equations necessary to solve such a motion. (Newton's law contributing with three) \\
+Its is clear if $2$ is at rest or in uniform and rectilinear translation, then $\mathbf{M}_Q=\mathbf{0}$, one  of the necessary and sufficient conditions for the equilibrium of the system of forces applied to a rigid body. (The other one is  the force resultant $\mathbf{F}=\mathbf{0}$)
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpiralMotionOfAParticle}
+\pmcreated{2013-03-22 17:23:42}
+\pmmodified{2013-03-22 17:23:42}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{spiral motion of a particle}
+\pmrecord{15}{39763}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{70B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newcommand{\ud}{\mathrm{d}}
+
+\begin{document}
+The purpose of this entry is to illustrate how calculus and another branches about elementary applied mathematics are useful to solve problems related to kinematics of a particle. To continuation, we state and discuss an interesting problem which is not so easy for the novices in those topics. Let us consider the plane motion of a particle subjected under the conditions over its tangential and normal acceleration components {\footnote{The velocity and acceleration of a particle in intrinsic coordinates are given by
+\begin{equation*}
+\mathbf{v}=v\mathbf{T}, \quad v=\left | \frac{\ud s}{\ud t}\right |, \qquad 
+\mathbf{a}=\frac{\ud v}{\ud t}\mathbf{T}+\frac{v^2}{\rho}\mathbf{N},
+\end{equation*}
+being the acceleration expressed in its components tangential and normal and referred to a Frenet-Serret local basis $\{\mathbf{T},\mathbf{N}\}$, moving along with the particle at the osculating plane, even if the motion is spatial.}} 
+\begin{equation}
+\frac{\ud v}{\ud t}=a, \qquad \frac{v^2}{\rho}=b, \qquad 0\leq t<\infty,
+\end{equation}
+where $a,b>0$ are known constants, $\rho=\ud s/\ud \theta$ the path's radius of curvature and $\theta$ the path's slope angle, at an arbitrary place occuped by the particle in its motion. At $t=0$, we impose intrinsic initial conditions $s(0)=0, v(0)\equiv\dot{s}(0)=v_0$, $\theta(0)=0$ ($\dot{\theta}(0)$ will depend on $v_0$ and $\rho(0)$). Then, from the equation $(1)_1$ {\footnote{So suggestive designation is useful when we are dealing with a set of equations which are indicated with a single number.}}, one integrates to get $v=v(t)=v_0+at$, and from $(1)_2$ we have (by the chain rule and the definition of $\rho$) $v^2/\rho=v\dot{\theta}=b$, where we perform an integration to get $\theta(t)$ {\footnote{Here, and in what it follows, abuse of notation is not confused.}}, i.e.
+\begin{equation}
+\theta(t)=\int_0^{\theta(t)}\!\!\ud\theta=b\int_0^t\frac{\ud t}{v_0+at}=\frac{b}{a}\log\bigg(1+\frac{at}{v_0}\bigg).
+\end{equation}
+We now introduce parametric Cartesian coordinates $(x(t),y(t))$, as we must deal with $\ud x=\ud s\cos\theta$ and 
+$\ud y=\ud s \sin\theta$ in order to find out the path. Thus, we have
+\begin{equation}
+\ud x=(v_0+at)\cos\bigg\{\frac{b}{a}\log\bigg(1+\frac{at}{v_0}\bigg)\bigg\}\ud t, \quad
+\ud y=(v_0+at)\sin\bigg\{\frac{b}{a}\log\bigg(1+\frac{at}{v_0}\bigg)\bigg\}\ud t.
+\end{equation} 
+Symmetry of (3) is evident and its integration is easy, if we pass to $z$-plane, i.e. $(x(t), y(t)) \mapsto z(t)$, as we may take advantage from Euler's formula $e^{iu}=\cos u+i\sin u$. That is,
+\begin{equation*}
+\ud z=(v_0+at)e^{i\frac{b}{a}\log\big(1+\frac{at}{v_0}\big)}\ud t=
+v_0e^{\log\big(1+\frac{at}{v_0}\big)}e^{\log\big(1+\frac{at}{v_0}\big)^{i\frac{b}{a}}}\ud t,
+\end{equation*}
+and by integrating,
+\begin{equation*}
+\int_0^{z(t)}\ud z=v_0\int_0^t\bigg(1+\frac{at}{v_0}\bigg)^{1+i\frac{b}{a}}\ud t=
+\frac{v_0^2}{a}\frac{\big(1+\frac{at}{v_0}\big)^{2+i\frac{b}{a}}\Big|_0^t}{2+i\frac{b}{a}}\,,
+\end{equation*}
+or {\footnote{We multiply the numerator and the denominator by the complex conjugate $2-ib/a$, and $1^{ib/a}=1$.}}
+\begin{equation}
+z(t)=\frac{v_0^2}{a}\frac{\big(2-i\frac{b}{a}\big)}{\big(\frac{b}{a}\big)^2+4}
+\bigg\{\Big(1+\frac{at}{v_0}\Big)^2e^{i\frac{b}{a}\log\big(1+\frac{at}{v_0}\big)}-1\bigg\}.
+\end{equation}
+Before separating real and imaginary parts, is advisable to make an isomorphic conformal mapping $z \to \zeta$ over $\mathbb{C}$, i.e. $x(t)+iy(t) \mapsto \xi(\tau)+i\eta(\tau)$, which consists of a nondimensional process about  parameters and the involved coordinates. That is,
+\begin{equation}
+\kappa:=\frac{b}{a}, \quad \tau:=1+\frac{at}{v_0}, \quad \zeta:=\frac{az}{v_0^2}, \quad t \mapsto \tau, \quad 
+t=0 \mapsto \tau=1.
+\end{equation}
+Then, by making use of Euler's formula, by introducing (5) into (4) and after a little algebra in order to separate real and imaginary parts, we obtain
+\begin{alignat*}
+\zeta(\tau) &= \xi(\tau)+i\eta(\tau) & \\ &= \frac{1}{\kappa^2+4}\Big(\{\tau^2[2\cos(\kappa\log\tau)+ \kappa\sin(\kappa\log\tau)]-2\} + i\{\tau^2[2\sin(\kappa\log\tau)-\kappa\cos(\kappa\log\tau)]+\kappa\}\Big),
+& \qquad\mbox{(6)}
+\end{alignat*}
+whence,
+\begin{equation*}
+\xi(\tau)+\frac{2}{\kappa^2+4}=\frac{\tau^2}{\kappa^2+4}\big\{2\cos(\kappa\log\tau)+\kappa\sin(\kappa\log\tau)\big\},
+\qquad\qquad\qquad\quad\mbox{(7)}
+\end{equation*}
+and
+\begin{equation*}
+\eta(\tau)-\frac{\kappa}{\kappa^2+4}=
+\frac{\tau^2}{\kappa^2+4}\big\{2\sin(\kappa\log\tau)-\kappa\cos(\kappa\log\tau)\big\}.
+\qquad\qquad\qquad\quad\mbox{(8)}
+\end{equation*}
+These are the nondimensional parametric equations of the path that the particle follows. It is evident the symmetry involved in (7) and (8). Squaring both, adding it and simplfying, we obtain the path's equation
+\begin{equation*}
+\Big(\xi+\frac{2}{\kappa^2+4}\Big)^2+\Big(\eta-\frac{\kappa}{\kappa^2+4}\Big)^2=
+\frac{\tau^4}{\kappa^2+4}\,,\qquad\qquad\qquad\qquad\qquad\mbox{(9)}
+\end{equation*}
+which correponds to a family of spirals of parameter $\kappa$.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

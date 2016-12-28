@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParticleMovingOnACardioidAtConstantFrequency}
+\pmcreated{2013-03-22 17:14:20}
+\pmmodified{2013-03-22 17:14:20}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{particle moving on a cardioid at constant frequency}
+\pmrecord{6}{39568}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{70B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+This is another elementary example{\footnote{C.F. particle moving on the astroid at constant frequency}} about particle kinematics. In this case we will use polar coordinates. Let us consider the cardioid {\footnote{the locus of the points of the plane described by a circle (or disc) boundary point which it  is rolling over another one with the same radius $R$.}}
+$$r=4R\cos^2\frac{\omega t}{2},$$ 
+{\footnote{indeed the native polar equation of the cardioid is
+$$r=2R(1+\cos\theta), \quad \theta=\omega t.$$ }}
+with $R,\omega>0$ given constants and $t\in [0,\infty)$ means time parameter. The position vector of a particle, respect to an orthonormal reference basis $\{\mathbf{\hat{r}},\mathbf{\hat{\theta}}\},$ moving on the cardioid is
+$$\mathbf{r}=4R\cos^2\frac{\omega t}{2}\,\mathbf{\hat{r}},$$
+and its velocity {\footnote{in polar coordinates we have
+$$\mathbf{\dot{r}}=\dot{r}\,\mathbf{\hat{r}}+r\dot{\theta}\, \mathbf{\hat{\theta}},$$
+because the base vectors $\mathbf{\hat{r}}, \mathbf{\hat{\theta}}$ are changing on direction and sense according the formulas 
+$$\frac{d\mathbf{\hat{r}}}{d\theta}=\mathbf{\hat{\theta}}, \qquad 
+\frac{d\mathbf{\hat{\theta}}}{d\theta}=-\mathbf{\hat{r}}.$$
+We are using the chain rule with $\dot{\theta}=\omega.$ Overdot denotes time differentiation everywhere.}}
+$$\mathbf{v}=\mathbf{\dot{r}}=-4R\omega\sin\frac{\omega t}{2}\cos\frac{\omega t}{2}\,\mathbf{\hat{r}}+
+4R\omega\cos^2\frac{\omega t}{2}\,\mathbf{\hat{\theta}}.$$
+Therefore the speed is
+$$v=4R\omega\cos\frac{\omega t}{2},$$
+and the tangent vector
+$$\mathbf{T}=-\sin\frac{\omega t}{2}\,\mathbf{\hat{r}}+\cos\frac{\omega t}{2}\,\mathbf{\hat{\theta}}.$$
+Next we use the formula
+$$\frac{v}{\rho}:=\big\Vert\mathbf{\dot{T}}\big\Vert=
+\bigg\Vert -\frac{\omega}{2}\cos\frac{\omega t}{2}\,\mathbf{\hat{r}}
+-\sin\frac{\omega t}{2}\,\mathbf{\dot{\hat{r}}}-
+\frac{\omega}{2}\sin\frac{\omega t}{2}\,\mathbf{\hat{\theta}}+
+\cos\frac{\omega t}{2}\,\mathbf{\dot{\hat{\theta}}}\bigg\Vert,$$
+and by using the time derivative of base vectors
+$$\frac{v}{\rho}=\bigg\Vert -\frac{3\omega}{2}\cos\frac{\omega t}{2}\,\mathbf{\hat{r}}-
+\frac{3\omega}{2}\sin\frac{\omega t}{2}\,\mathbf{\hat{\theta}}\bigg\Vert,$$
+getting the equation
+$$v=\frac{3}{2}\omega\rho.$$
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FirstOrderOperatorsInRiemannianGeometry}
+\pmcreated{2013-03-22 15:28:18}
+\pmmodified{2013-03-22 15:28:18}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{first order operators in Riemannian geometry}
+\pmrecord{7}{37325}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{70G45}
+\pmclassification{msc}{53B20}
+\pmrelated{Gradient}
+\pmrelated{Curl}
+\pmrelated{Divergence}
+\pmrelated{LeibnizNotationForVectorFields}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\newcommand{\fM}{\mathcal{C}^{\infty}(M)}
+\newcommand{\vfM}{\mathcal{X}(M)}
+\newcommand{\ddx}[1]{\frac{\partial}{\partial x^{#1}}}
+\newcommand{\ddxf}[2]{\frac{\partial #2}{\partial x^{#1}}}
+
+\newcommand{\grad}{\operatorname{grad}}
+
+\newcommand{\iprod}{\mathop{\rfloor}}
+
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\Div}{\operatorname{div}}
+\newcommand{\curl}{\operatorname{curl}}
+\begin{document}
+On a pseudo-Riemannian manifold $M$, and in Euclidean space in
+particular, one can express the gradient operator, the divergence
+operator, and the curl operator (which makes sense only if $M$ is
+3-dimensional) in terms of the exterior derivative.  Let $\fM$ denote
+the ring of smooth functions on $M$; let $\vfM$ denote the
+$\fM$-module of smooth vector fields, and let $\Omega^1(M)$ denote the
+$\fM$-module of smooth 1-forms. The contraction with the metric tensor
+$g$ and its inverse $g^{-1}$, respectively, defines the
+$\fM$-module isomorphisms
+\[\flat:\vfM\to\Omega^1(M),\quad \sharp \colon \Omega^1(M)\to\vfM.\]
+In local coordinates, this isomorphisms is expressed as
+\[
+\left(\ddx{i}\right)^\flat= \sum_j g_{ij} dx^j,\quad 
+\left(dx^j\right)^\sharp = \sum_i g^{ij} \ddx{i}.
+\]
+or as the lowering of an index.  To wit, for $V\in\vfM$, we have
+\begin{align*}
+V&=\sum_{i=1}^n V^i\ddx{i},\\
+(V^\flat)_j &= \sum_{i=1}^n g_{ij} V^i,\quad j=1,\ldots,n.\\
+\end{align*}
+
+The gradient operator, which in tensor notation is expressed as
+$$(\grad f)^i = g^{ij} \ddxf{j}{f},\quad f\in \fM,$$
+can now be defined as
+$$\grad f = (df)^\sharp,\quad f \in\fM.$$
+
+Another natural structure on an $n$-dimensional Riemannian manifold is
+the volume form, $\omega \in \Omega^n(M)$, defined by $$\omega =
+\sqrt{\det g_{ij}}\, dx^1\wedge\ldots\wedge dx^n.$$
+Multiplication by
+the volume form defines a natural isomorphism between functions and
+$n$-forms: $$f\mapsto f\omega,\quad f\in \fM.$$
+Contraction with the
+volume form defines a natural isomorphism between vector fields and
+$(n-1)$-forms: $$X\mapsto X\iprod \omega,\quad X\in \vfM,$$
+or
+equivalently $$\ddx{i} \mapsto (-1)^{i+1} \sqrt{\det g_{ij}}\,
+dx^1\wedge\ldots \wedge \widehat{dx^i}\wedge\ldots \wedge dx^n,$$
+where $\widehat{dx^i}$ indicates an omitted factor. The divergence
+operator, which in tensor notation is expressed as $$\Div X = \nabla_i
+X^i,\quad X\in \vfM$$
+can be defined in a coordinate-free way by the following relation:
+$$(\Div X)\, \omega = d(X\iprod \omega),\quad X\in \vfM.$$
+
+
+Finally, on a $3$-dimensional manifold we may define the curl
+operator in a coordinate-free fashion by means of the following relation:
+$$(\curl X)\iprod \omega = d(X^\flat),\quad X\in \vfM.$$
+%%%%%
+%%%%%
+\end{document}

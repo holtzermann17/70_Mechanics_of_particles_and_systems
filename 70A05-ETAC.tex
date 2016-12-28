@@ -1,0 +1,282 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ETAC}
+\pmcreated{2013-03-22 18:16:15}
+\pmmodified{2013-03-22 18:16:15}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{ETAC}
+\pmrecord{52}{40873}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{70A05}
+\pmclassification{msc}{60A05}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{55N40}
+\pmclassification{msc}{18-00}
+\pmsynonym{axiomatic elementary theory of categories and functors}{ETAC}
+\pmsynonym{ETAS sub-theory}{ETAC}
+\pmsynonym{special case of ETAS}{ETAC}
+\pmsynonym{axiomatic construction of the theory of categories and functors}{ETAC}
+%\pmkeywords{elementary (axiomatic) theory of categories}
+%\pmkeywords{ETAS}
+\pmrelated{ETAS}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{FunctorCategories}
+\pmrelated{2Category}
+\pmrelated{CategoryTheory}
+\pmrelated{FunctorCategory2}
+\pmrelated{WilliamFrancisLawvere}
+\pmrelated{NaturalTransformationsOfOrganismicStructures}
+\pmdefines{axiom of elementary theory of abstract categories}
+\pmdefines{axiomatic theory of categories and functors}
+\pmdefines{axiomatic construction of the theory of categories and functors}
+\pmdefines{ETAC sentence}
+\pmdefines{ETAC theorem}
+\pmdefines{ETAC formula}
+\pmdefines{Lawvere's elementary theory of abstract categories}
+\pmdefines{t}
+
+% this is the default PlanetMath preamble.  as your 
+% of TeX increases, you will probably want to edit this, but
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\subsection{Introduction}
+
+
+ {\em $ETAC$} is the acronym for Lawvere's  {\em `Elementary Theory of Abstract Categories'}
+which provides an axiomatic construction of the theory of categories and functors that was extended to 
+the \emph{axiomatic theory of supercategories}. The following section lists the $ETAC$ (or ETAC) axioms.
+
+
+\subsection{Axioms of $ETAC$}
+
+ The ETAC axioms viz. (\cite{LW2}) are : 
+
+0. For any letters $x, y, u, A, B$, and {\em unary function} symbols $\Delta_0$ and $\Delta_1$,
+and \emph{composition law} $\Gamma$, the following are defined as \emph{formulas}: $\Delta_0 (x) = A$,
+$\Delta_1 (x) = B$, $\Gamma (x,y;u)$, and $ x = y$; These formulas are to be, respectively, interpreted as
+``$A$ is the domain of $x$", ``$B$ is the codomain, or range, of $x$", ``$u$ is the composition $x$ followed by $y$",
+and ``$x$ equals $y$". 
+
+1. If $\Phi$ and $\Psi$ are formulas, then ``$[\Phi]$ and $[\Psi]$'' , ``$[\Phi]$ or$[\Psi]$'', ``$[\Phi] \Rightarrow [\Psi]$'', and ``$[not \Phi]$''  are also formulas.
+
+2. If $\Phi$ is a formula and $x$ is a letter, then ``$ \forall x[\Phi]$'', 
+``$ \exists x[\Phi]$'' are also formulas.
+
+3. A string of symbols is a formula in ETAC iff it follows from the above axioms 0 to 2.
+
+A \emph{sentence} is then defined as any formula in which every occurrence of each letter $x$ is within the scope of a {\em logical quantifier}, such as $\forall x$  or $\exists x $.  The \emph{theorems} of ETAC are defined as all those sentences which can be derived through logical inference from the following ETAC axioms:
+
+4. $\Delta_i(\Delta_j(x))=\Delta_j(x)$ for  $i,j = 0, 1$. 
+
+5a. $\Gamma(x,y;u)$ and $\Gamma(x,y;u')\Rightarrow u = u'$.
+
+5b. $ \exists u [\Gamma(x,y;u)] \Rightarrow \Delta_1(x) =  \Delta_0(y)$;
+
+5c. $\Gamma(x,y;u) \Rightarrow \Delta_0(u) =  \Delta_0(x)$ and $\Delta_1(u) =  \Delta_1(y)$.
+
+6. Identity axiom:
+$ \Gamma(\Delta_0 (x), x;x)$ and  $ \Gamma(x, \Delta_1 (x);x)$  yield always the same result.
+
+7. Associativity axiom: $\Gamma(x,y;u)$ and $\Gamma(y,z;w)$ and $\Gamma(x,w;f)$ and $\Gamma(u,z;g)\Rightarrow f = g $.
+With these axioms in mind, one can see that commutative diagrams can be now regarded as certain 
+\textit{abbreviated} formulas corresponding to systems of equations such as:  
+$\Delta_0(f) = \Delta_0(h) = A$, $\Delta_1(f) = \Delta_0(g) = B$, $\Delta_1(g) = \Delta_1(h) = C$ 
+and $\Gamma(f,g;h)$, instead of $g\circ f = h$ for the arrows f, g, and h, drawn respectively between the 
+`objects' A, B and C, thus forming a `triangular commutative diagram' in the usual sense of category theory. Compared with the ETAC formulas such diagrams have the advantage of a geometric--intuitive image of their equivalent underlying equations. The common property of A of being an object is written in shorthand as the abbreviated formula Obj(A) standing for the following three equations:
+
+8a. $A = \Delta_0(A) = \Delta_1(A)$,
+
+8b. $ \exists x[A = \Delta_0 (x)] \exists y[A = \Delta_1 (y)]$,
+
+and 
+
+8c. $\forall x \forall u [\Gamma (x,A; u)\Rightarrow x = u]$ and 
+$ \forall y  \forall v [\Gamma (A,y; v)] \Rightarrow y = v$ .  
+
+\subsection{Remarks on ETAC interpretation}
+
+  Intuitively, with this terminology and axioms a \textit{category} is meant to be any structure which is a direct interpretation of ETAC. A \textit{functor} is then  understood to be a \textit{triple} consisting of two such categories and of a rule F (`the functor') which assigns to each arrow or morphism $x$ of the first category,
+a unique morphism, written as `$F(x)$' of the second category, in such a way that the usual two conditions on both objects and arrows in the standard functor definition are fulfilled (see for example \cite {ICBM})--  the functor is well behaved, it carries object identities to image object identities, and commutative diagrams to image commmutative diagrams of the corresponding image objects and image morphisms.  At the next level, one then defines \emph{natural transformations} or \emph{functorial morphisms} between functors as metalevel abbreviated formulas and equations pertaining to commutative diagrams of the distinct images of two functors acting on both objects and morphisms. As the name indicates natural transformations are also well--behaved, in terms of the ETAC equations being always satisfied. 
+
+
+\begin{thebibliography}{99}
+
+\bibitem{BHS2}
+R. Brown R, P.J. Higgins, and R. Sivera: {\em ``Nonabelian Algebraic Topology: Filtered Spaces, Crossed Complexes, Cubical Homotopy Groupoids.''} {\bf EMS Tracts in Mathematics}, Vol.{\bf 15}, an EMS publication: September (2011), 708 pages. ISBN 978-3-13719-083-8.
+
+\bibitem{BGB2}
+R. Brown, J. F. Glazebrook and I. C. Baianu: A Categorical and Higher Dimensional Algebra Framework for Complex Systems and Spacetime Structures,{\em Axiomathes} \textbf{17}:409--493, (2007).
+
+\bibitem{ICB3}
+I.C. Baianu: Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32} (1970), 539-561.
+
+\bibitem{BS}
+R. Brown  and C.B. Spencer: Double groupoids and crossed modules,\emph{Cahiers Top. G\'{e}om.Diff.} \textbf{17} (1976), 343--362.
+
+\bibitem{LW1}
+W.F. Lawvere: 1963. Functorial Semantics of Algebraic Theories. {\em Proc. Natl. Acad. Sci. USA}, {\bf 50}: 869--872.
+
+\bibitem{LW2}
+W. F. Lawvere: 1966. The Category of Categories as a Foundation for Mathematics. , In {\em Proc. Conf. Categorical Algebra}--La Jolla, 1965, Eilenberg, S et al., eds. Springer--Verlag: Berlin, Heidelberg and New York, pp. 1--20.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}
